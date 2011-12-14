@@ -1,3 +1,17 @@
+filetype off "required for vundle
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'git://github.com/petdance/vim-perl.git'
+Bundle 'git://github.com/altercation/vim-colors-solarized.git'
+Bundle 'git://github.com/vim-scripts/perl-support.vim.git'
+Bundle 'git://github.com/mileszs/ack.vim.git'
+Bundle 'git://github.com/motemen/git-vim.git'
+
+filetype plugin indent on
+
 "colors
 syntax enable
 set background=dark
@@ -22,7 +36,6 @@ set ignorecase
 set smartcase
 
 "file
-filetype on
 "jump back to the last cursor position
 if has("autocmd")
 	autocmd BufReadPost *
