@@ -1,3 +1,4 @@
+filetype on
 filetype off "required for vundle
 
 set rtp+=~/.vim/bundle/vundle/
@@ -27,7 +28,6 @@ set autoindent
 set smarttab " Use 'shiftwidth' setting at start of lines
 set expandtab " Inserts four spaces with the tab key
 set softtabstop=4 " Treats four spaces as one tab
-filetype plugin indent on " sensible auto indent
 
 "search
 "/The finds 'The'
