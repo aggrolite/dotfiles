@@ -9,7 +9,7 @@ Bundle 'git://github.com/petdance/vim-perl.git'
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'git://github.com/vim-scripts/perl-support.vim.git'
 Bundle 'git://github.com/mileszs/ack.vim.git'
-Bundle 'git://github.com/motemen/git-vim.git'
+Bundle 'git://github.com/tpope/vim-fugitive.git'
 
 filetype plugin indent on
 
