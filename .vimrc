@@ -53,6 +53,7 @@ set showmatch
 set nocompatible "vim, not vi
 set showcmd
 set noerrorbells visualbell t_vb=
+autocmd BufWritePre * :%s/\s\+$//e
 
 "set number "show line numbers
 set shell=bash
