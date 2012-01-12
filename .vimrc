@@ -60,4 +60,5 @@ set shell=bash
 set noerrorbells "no noise
 set laststatus=2
 
-
+"key maps
+nmap <SPACE> za
