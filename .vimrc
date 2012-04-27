@@ -64,3 +64,12 @@ set encoding=utf-8
 
 "key maps
 nmap <SPACE> za
+
+"encryption
+"add this to bash profile: alias vime='vim -u ~/.vimencrypt -x'
+"create .vimencrypt and add this to file:
+"source ~/.vimrc
+"set nobackup
+"set noswapfile
+"set nowritebackup
+"set cm=blowfish (blowfish only for vim >=7.3 / older versions default to crypt)
