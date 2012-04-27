@@ -34,6 +34,7 @@ set softtabstop=4 " Treats four spaces as one tab
 "/the finds 'The' or 'the'
 set ignorecase
 set smartcase
+set nohlsearch "don't highlight results
 
 "file
 "jump back to the last cursor position
@@ -44,7 +45,7 @@ if has("autocmd")
 	\ endif
 endif
 
-"keys
+"this saves my pinky. now if i can get out of the habit of pressing shift >:(
 nore ; :
 nore , ;
 
@@ -59,6 +60,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 set shell=bash
 set noerrorbells "no noise
 set laststatus=2
+set encoding=utf-8
 
 "key maps
 nmap <SPACE> za
