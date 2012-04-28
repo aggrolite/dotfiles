@@ -45,15 +45,13 @@ if has("autocmd")
 	\ endif
 endif
 
-"this saves my pinky. now if i can get out of the habit of pressing shift >:(
-nore ; :
-nore , ;
-
 "misc
 set showmatch
 set nocompatible "vim, not vi
 set showcmd
 set noerrorbells visualbell t_vb=
+set ttyfast
+set ruler
 autocmd BufWritePre * :%s/\s\+$//e
 
 "set number "show line numbers
@@ -63,7 +61,22 @@ set laststatus=2
 set encoding=utf-8
 
 "key maps
-nmap <SPACE> za
+nnoremap <SPACE> za
+"i want perl regex!
+nnoremap / /\v
+vnoremap / /\v
+"nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+"this saves my pinky. now if i can get out of the habit of pressing shift >:(
+noremap ; :
+noremap , ;
+
 
 "encryption
 "add this to bash profile: alias vime='vim -u ~/.vimencrypt -x'
