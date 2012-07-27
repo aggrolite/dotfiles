@@ -5,7 +5,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'git://github.com/petdance/vim-perl.git'
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'git://github.com/vim-scripts/perl-support.vim.git'
 Bundle 'git://github.com/mileszs/ack.vim.git'
@@ -53,6 +52,7 @@ set noerrorbells visualbell t_vb=
 set ttyfast
 set ruler
 autocmd BufWritePre * :%s/\s\+$//e
+set bs=2 "7.3 breaks my backspace :(
 
 "set number "show line numbers
 set shell=bash
@@ -62,10 +62,8 @@ set encoding=utf-8
 
 "key maps
 nnoremap <SPACE> za
-"i want perl regex!
-nnoremap / /\v
-vnoremap / /\v
-"nnoremap <up> <nop>
+"remove arrow keys
+nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
@@ -86,3 +84,8 @@ noremap , ;
 "set noswapfile
 "set nowritebackup
 "set cm=blowfish (blowfish only for vim >=7.3 / older versions default to crypt)
+
+" use perl tidy with :Tidy
+" either format entire file or selected area with visual
+command -range=% -nargs=* Tidy <line1>,<line2>!
+    \perltidy <args>
