@@ -65,7 +65,11 @@ set ruler
 autocmd BufWritePre * :%s/\s\+$//e
 set bs=2 " 7.3 breaks my backspace :(
 
-" set number "show line numbers
+"show line numbers and set to a dark color
+set number
+set numberwidth=3
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
 set noerrorbells " no noise
 set laststatus=2
 set encoding=utf-8
