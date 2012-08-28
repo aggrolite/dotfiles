@@ -17,8 +17,8 @@ filetype plugin indent on
 syntax enable
 set background=dark
 colorscheme solarized
-" set cul "highlight current line
-hi CursorLine term=none cterm=none ctermbg=4
+"set cul "highlight current line
+"hi CursorLine term=none cterm=none ctermbg=24 ctermfg=white
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " define bash for :sh to use aliases
@@ -49,9 +49,12 @@ endif
 
 " Resize windows with MOUSE:
 " http://usevim.com/2012/05/16/mouse/
+" To copy text: hold alt key before selecting text
 set ttyfast " send more characters for redraw
 set mouse=a " enable mouse for all modes
 set ttymouse=xterm2 " works with iTerm
+
+"noremap <F6> :set mouse<CR>
 
 " allow pasting
 set pastetoggle=<F2>
@@ -68,8 +71,7 @@ set bs=2 " 7.3 breaks my backspace :(
 "show line numbers and set to a dark color
 set number
 set numberwidth=3
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-
+highlight LineNr term=bold cterm=bold ctermfg=11 ctermbg=0
 set noerrorbells " no noise
 set laststatus=2
 set encoding=utf-8
