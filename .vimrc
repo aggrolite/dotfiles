@@ -9,14 +9,13 @@ Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'git://github.com/vim-scripts/perl-support.vim.git'
 Bundle 'git://github.com/mileszs/ack.vim.git'
 Bundle 'git://github.com/tpope/vim-fugitive.git'
-Bundle 'git://github.com/mileszs/ack.vim.git'
 
 filetype plugin indent on
 
 " colors
 syntax enable
-set background=dark
-colorscheme solarized
+"set background=light
+"colorscheme solarized
 "set cul "highlight current line
 "hi CursorLine term=none cterm=none ctermbg=24 ctermfg=white
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -71,7 +70,8 @@ set bs=2 " 7.3 breaks my backspace :(
 "show line numbers and set to a dark color
 set number
 set numberwidth=3
-highlight LineNr term=bold cterm=bold ctermfg=11 ctermbg=0
+highlight LineNr term=bold cterm=bold ctermfg=6 ctermbg=7
+nnoremap <F5> :set nonumber!<CR>
 set noerrorbells " no noise
 set laststatus=2
 set encoding=utf-8
