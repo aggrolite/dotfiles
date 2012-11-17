@@ -1,27 +1,13 @@
-filetype on
-filetype off " required for vundle
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'git://github.com/altercation/vim-colors-solarized.git'
-Bundle 'git://github.com/vim-scripts/perl-support.vim.git'
-Bundle 'git://github.com/mileszs/ack.vim.git'
-Bundle 'git://github.com/tpope/vim-fugitive.git'
-
 filetype plugin indent on
-
-" colors
 syntax enable
-"set background=light
-"colorscheme solarized
-"set cul "highlight current line
-"hi CursorLine term=none cterm=none ctermbg=24 ctermfg=white
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " define bash for :sh to use aliases
-set shell=/bin/bash\ -li
+" this breaks perltidy on my local machine!
+" i have aliases defined on my work's dev box
+" but no longer use :sh...I just open a new tab
+" for info on interactive shell see:
+" http://stackoverflow.com/questions/8841116/vim-not-recognizing-aliases-when-in-interactive-mode
+" set shell=/bin/bash\ -li
 
 " format
 set nowrap
@@ -52,8 +38,6 @@ endif
 set ttyfast " send more characters for redraw
 set mouse=a " enable mouse for all modes
 set ttymouse=xterm2 " works with iTerm
-
-"noremap <F6> :set mouse<CR>
 
 " allow pasting
 set pastetoggle=<F2>
