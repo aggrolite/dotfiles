@@ -1,29 +1,21 @@
-filetype on
-filetype off " required for vundle
-
+" vundle plumbing
+set nocompatible
+filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
 Bundle 'gmarik/vundle'
-Bundle 'git://github.com/altercation/vim-colors-solarized.git'
-Bundle 'git://github.com/vim-scripts/perl-support.vim.git'
-Bundle 'git://github.com/mileszs/ack.vim.git'
+
+ " plugins to install:
 Bundle 'git://github.com/tpope/vim-fugitive.git'
+Bundle 'git://github.com/mileszs/ack.vim.git'
+Bundle 'git://github.com/mattn/gist-vim.git'
+Bundle 'git://github.com/mattn/webapi-vim.git'
+" Bundle 'git://github.com/fholgado/minibufexpl.vim.git'
 
-filetype plugin indent on
-
-" colors
-syntax enable
-"set background=light
-"colorscheme solarized
-"set cul "highlight current line
-"hi CursorLine term=none cterm=none ctermbg=24 ctermfg=white
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" define bash for :sh to use aliases
-set shell=/bin/bash\ -li
+ filetype plugin indent on
 
 " format
+syntax enable
 set nowrap
 set tabstop=4
 set shiftwidth=4
@@ -37,7 +29,6 @@ set ignorecase
 set smartcase
 set nohlsearch " don't highlight results
 
-" file
 " jump back to the last cursor position
 if has("autocmd")
        autocmd BufReadPost *
@@ -53,14 +44,15 @@ set ttyfast " send more characters for redraw
 set mouse=a " enable mouse for all modes
 set ttymouse=xterm2 " works with iTerm
 
-"noremap <F6> :set mouse<CR>
-
 " allow pasting
-set pastetoggle=<F2>
+set paste
+"set pastetoggle=<F2>
+
+set timeout timeoutlen=100 ttimeoutlen=100
 
 " misc
+set nocompatible " be iMproved
 set showmatch
-set nocompatible " vim, not vi
 set showcmd
 set noerrorbells visualbell t_vb=
 set ruler
@@ -74,7 +66,14 @@ highlight LineNr term=bold cterm=bold ctermfg=6 ctermbg=7
 nnoremap <F5> :set nonumber!<CR>
 set noerrorbells " no noise
 set laststatus=2
+
 set encoding=utf-8
+
+" Ack
+let g:ackprg="~/local/bin/ack -H --nocolor --nogroup --column"
+
+" Gist
+let g:github_api_url = 'https://github.sol/api/v3'
 
 " remove arrow keys
 nnoremap <up> <nop>
@@ -94,3 +93,8 @@ command -range=% -nargs=* Tidy <line1>,<line2>!perltidy -q
 
 " Press F6 for perltidy
 noremap <F6> :Tidy<CR>
+
+set term=xterm-256color
+
+" don't let vim warn me when i want to switch from an unsaved buffer
+set hidden
