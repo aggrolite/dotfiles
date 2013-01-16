@@ -10,7 +10,13 @@ Bundle 'git://github.com/tpope/vim-fugitive.git'
 Bundle 'git://github.com/mileszs/ack.vim.git'
 Bundle 'git://github.com/mattn/gist-vim.git'
 Bundle 'git://github.com/mattn/webapi-vim.git'
+Bundle 'git://github.com/c9s/perlomni.vim.git'
+" Bundle 'git://github.com/vim-scripts/L9.git'
+" Bundle 'git://github.com/vim-scripts/FuzzyFinder.git'
+" Bundle 'git://github.com/ervandew/supertab.git'
 " Bundle 'git://github.com/fholgado/minibufexpl.vim.git'
+
+set ofu=syntaxcomplete#Complete
 
  filetype plugin indent on
 
@@ -45,8 +51,8 @@ set mouse=a " enable mouse for all modes
 set ttymouse=xterm2 " works with iTerm
 
 " allow pasting
-set paste
-"set pastetoggle=<F2>
+" set paste
+set pastetoggle=<F2>
 
 set timeout timeoutlen=100 ttimeoutlen=100
 
