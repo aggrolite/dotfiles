@@ -18,7 +18,7 @@ Bundle 'git://github.com/c9s/perlomni.vim.git'
 
 set ofu=syntaxcomplete#Complete
 
- filetype plugin indent on
+filetype plugin indent on
 
 " format
 syntax enable
@@ -51,8 +51,16 @@ set mouse=a " enable mouse for all modes
 set ttymouse=xterm2 " works with iTerm
 
 " allow pasting
-" set paste
-set pastetoggle=<F2>
+set pastetoggle=<F4>
+
+" switch buffers
+nnoremap <silent> <F7> :bp<CR>
+nnoremap <silent> <F9> :bn<CR>
+
+" Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
 
 set timeout timeoutlen=100 ttimeoutlen=100
 
@@ -90,8 +98,6 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-noremap ; :
-noremap , ;
 
 " use perl tidy with :Tidy
 " either format entire file or selected area with visual
@@ -103,4 +109,7 @@ noremap <F6> :Tidy<CR>
 set term=xterm-256color
 
 " don't let vim warn me when i want to switch from an unsaved buffer
-set hidden
+" set hidden
+
+" keep cursor 5 lines away from edges of screen
+set scrolloff=5
