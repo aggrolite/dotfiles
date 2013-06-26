@@ -1,0 +1,4 @@
+-I/home/curtis/ypbot/cpan/lib/perl5
+--verbose
+--timer
+--trap
