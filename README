@@ -1,4 +1,7 @@
 my dot files include:
 
+.bash_profile
 .vimrc
 .tmux.conf
+.proverc
+.gitignore
