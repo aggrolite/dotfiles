@@ -113,3 +113,5 @@ set term=xterm-256color
 
 " keep cursor 5 lines away from edges of screen
 set scrolloff=5
+
+au BufRead,BufNewFile * start
