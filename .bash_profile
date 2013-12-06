@@ -13,6 +13,10 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
 export LS_COLORS='no=00:fi=00:di=00;34:ln=00;36:pi=40;33:so=00;35:bd=40;33;01:ex=00;35'
 alias ls='ls --color=auto'
 PS1="$ "
