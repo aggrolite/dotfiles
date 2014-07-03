@@ -6,7 +6,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
  " plugins to install:
-Bundle 'git://github.com/airblade/vim-gitgutter.git'
+" Bundle 'git://github.com/airblade/vim-gitgutter.git'
 Bundle 'git://github.com/tpope/vim-fugitive.git'
 Bundle 'git://github.com/mileszs/ack.vim.git'
 Bundle 'git://github.com/mattn/gist-vim.git'
