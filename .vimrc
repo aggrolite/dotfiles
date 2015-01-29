@@ -1,24 +1,3 @@
-" vundle plumbing
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
- " plugins to install:
-" Bundle 'git://github.com/airblade/vim-gitgutter.git'
-Bundle 'git://github.com/tpope/vim-fugitive.git'
-Bundle 'git://github.com/mileszs/ack.vim.git'
-Bundle 'git://github.com/mattn/gist-vim.git'
-Bundle 'git://github.com/mattn/webapi-vim.git'
-Bundle 'git://github.com/c9s/perlomni.vim.git'
-" Bundle 'git://github.com/vim-scripts/L9.git'
-" Bundle 'git://github.com/vim-scripts/FuzzyFinder.git'
-" Bundle 'git://github.com/ervandew/supertab.git'
-" Bundle 'git://github.com/fholgado/minibufexpl.vim.git'
-
-set ofu=syntaxcomplete#Complete
-
 filetype plugin indent on
 
 " format
