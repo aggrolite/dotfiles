@@ -1,0 +1,6 @@
+[user]
+	email = curtis@cpan.org
+	name = Curtis Brandt
+[alias]
+    co = checkout
+    st = status
