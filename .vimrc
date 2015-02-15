@@ -3,12 +3,15 @@ filetype plugin indent on
 " format
 syntax enable
 set nowrap
-set tabstop=4
-set shiftwidth=4
 set autoindent
 set smarttab " Use 'shiftwidth' setting at start of lines
-set expandtab " Inserts four spaces with the tab key
-set softtabstop=4 " Treats four spaces as one tab
+
+" set 4 width tabs, and use spaces
+set sw=4 ts=4 sts=4 et
+
+" detect Go files, adjust tabbing
+au BufRead,BufNewFile *.go set filetype=go
+autocmd FileType go :setlocal sw=8 ts=8 sts=8 noexpandtab
 
 " search
 set ignorecase
