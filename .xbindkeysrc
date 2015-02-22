@@ -1,0 +1,18 @@
+# volume
+#
+"~/bin/mute"
+  F8
+
+"mixer -f /dev/mixer1 vol -5"
+  F9
+
+"mixer -f /dev/mixer1 vol +5"
+  F10
+
+# screen
+#
+"~/bin/backlight -20"
+  F6
+
+"~/bin/backlight 20"
+  F7

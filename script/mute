@@ -1,0 +1,22 @@
+#!/bin/csh
+#
+# mute script
+
+set curvol = "`mixer -f /dev/mixer1 -s vol`"
+
+if ( -f ~/.savemute ) then
+	set lastvol = "`cat ~/.savemute`"
+else
+	set lastvol = ""
+endif
+
+if ( "$curvol" == "vol 0:0" ) then
+	if ( "$lastvol != "" ) then
+		eval mixer -f /dev/mixer1 $lastvol
+	endif
+else
+	if ( "$lastvol" != "$curvol" ) then
+		echo "$curvol" > ~/.savemute
+	endif
+	mixer -f /dev/mixer1 vol 0
+endif

@@ -1,0 +1,3 @@
+xterm*Background:	black
+xterm*Foreground:	white
+Xft*antialias:		true
