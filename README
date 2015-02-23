@@ -1,7 +1,3 @@
-my dot files include:
+Note: This is not necessarily an accurate repo for all of my congifs, but it's currently being updated.
 
-.bash_profile
-.vimrc
-.tmux.conf
-.proverc
-.gitignore
+TODO: Use a more efficient tool, perhaps https://github.com/ingydotnet/...
