@@ -5,3 +5,4 @@ xbindkeys
 exec fluxbox
 #exec enlightenment_start
 xrandr --output default --mode 1366x768
+xrdb -merge ~/.Xresources
