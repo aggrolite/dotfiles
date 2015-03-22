@@ -1,3 +1,5 @@
+;; reload config
+;; (load "~/.stumpwmrc")
 (in-package :stumpwm)
 
 ;; set prefix to super + t (pretty easy for acer c720)
@@ -11,3 +13,5 @@
 
 ;; let mouse focus
 (setf *mouse-focus-policy* :click)
+
+(define-key *root-map* (kbd "u") "exec urxvt")
