@@ -1,6 +1,19 @@
 [user]
 	email = curtis@cpan.org
 	name = Curtis Brandt
+[branch]
+	autosetupmerge = true
+[gc]
+	auto = 1
+[color]
+	diff = auto
+	status = auto
+	branch = auto
 [alias]
     co = checkout
     st = status
+    l = log --pretty=oneline --abbrev-commit
+[core]
+	editor = /usr/bin/vim
+[push]
+	default = matching
