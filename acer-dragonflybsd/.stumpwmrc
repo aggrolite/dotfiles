@@ -14,4 +14,6 @@
 ;; let mouse focus
 (setf *mouse-focus-policy* :click)
 
+;; apps!
 (define-key *root-map* (kbd "u") "exec urxvt")
+(define-key *root-map* (kbd "f") "exec firefox")
